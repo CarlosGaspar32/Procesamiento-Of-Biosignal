@@ -5,11 +5,13 @@ float Ts = 1/Fs;
 
 void setup() {
   pinMode(3,OUTPUT);
+  Serial.begin(9600);
 }
 
 void loop() {
   for(int i=0;i<sizeof(ABP);i++){
     analogWrite(3,ABP[i]);
+    Serial.println(ABP[i]);
     delay(8);
   }
 }
