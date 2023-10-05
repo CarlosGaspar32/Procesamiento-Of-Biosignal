@@ -58,7 +58,7 @@ stem(my_n,ig); title('5tri(0.2(n+3))')
 
 ih=5*func_tri(0.2*(my_n-5));
 subplot(2,2,3)
-stem(my_n,ih); title('5tri(0.2n-5)')
+stem(my_n,ih); title('5tri(0.2*(n-5)')
 
 ii=((-1).^my_n).*5.*func_tri(0.2*(my_n-5));
 subplot(2,2,4)
