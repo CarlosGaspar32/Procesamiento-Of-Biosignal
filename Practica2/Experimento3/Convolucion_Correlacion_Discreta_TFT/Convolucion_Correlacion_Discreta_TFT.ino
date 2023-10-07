@@ -50,7 +50,7 @@ void loop() {
       tft.setTextColor(ILI9341_WHITE,ILI9341_RED);
       tft.setCursor(E,40);
       tft.print(Y[n]);
-      E = E + 30;
+      E = E + 40;
       delay(10);
     }
 
@@ -102,5 +102,5 @@ void loop() {
       delay(10);
     }
 
-    while(1);
+    break;
   }

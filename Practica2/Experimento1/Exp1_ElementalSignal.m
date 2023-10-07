@@ -1,4 +1,4 @@
-%Ejemplo del uso de funciones anónimas para generar señales elementales
+%% GENERACIÓN DE SEÑALES
 close all; clear; clc;
 %t's y n's
 t1=-10; t2=10;
