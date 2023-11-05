@@ -34,7 +34,7 @@ while ishandle(1) % Mientras la figura esté abierta en MATLAB
         t = 0:ts:10-ts;
         limitefinal = 5;
         limiteinicial = 0;
-        figure(1)
+        %figure(1)
         for i=1:9:2570
             plot(t(1:i),Arritmia(1:i))
             if t(i) < limitefinal
@@ -43,17 +43,18 @@ while ishandle(1) % Mientras la figura esté abierta en MATLAB
                 limitefinal = limitefinal + 5;
                 limiteinicial = limiteinicial + 5;
             end
+            if s.BytesAvailable > 0
+                break;
+            end
             pause(ts);
             
         end
-        valor = fscanf(s, '%s'); % Leer el código desde Arduino como cadena
-            
         
     elseif strcmp(valor, '2') % Si Arduino envía '2'
         t2 = 0:ts2:10-ts2;
         limitefinal = 5;
         limiteinicial = 0;
-        figure(2)
+        %figure(2)
         for i=1:6:2500
             plot(t2(1:i),BIH(1:i))
             if t2(i) < limitefinal
@@ -61,6 +62,9 @@ while ishandle(1) % Mientras la figura esté abierta en MATLAB
             else
                 limitefinal = limitefinal + 5;
                 limiteinicial = limiteinicial + 5;
+            end
+            if s.BytesAvailable > 0
+                break;
             end
             pause(ts2/10);
         end
@@ -70,7 +74,7 @@ while ishandle(1) % Mientras la figura esté abierta en MATLAB
         t3 = 0:ts3:10-ts3;
         limitefinal = 5;
         limiteinicial = 0;
-        figure(3)
+        %figure(3)
         for i=1:50:20000
             plot(t3(1:i),PCG(1:i))
             if t3(i) < limitefinal
@@ -78,6 +82,9 @@ while ishandle(1) % Mientras la figura esté abierta en MATLAB
             else
                 limitefinal = limitefinal + 5;
                 limiteinicial = limiteinicial + 5;
+            end
+            if s.BytesAvailable > 0
+                break;
             end
             pause(ts3/10);
         end

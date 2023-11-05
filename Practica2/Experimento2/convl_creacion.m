@@ -1,3 +1,4 @@
+
 function Y = convol_creacion(x,h)
     % Calcula la convolución discreta de dos vectores x y h
     Lx=length(x);
@@ -23,3 +24,5 @@ function Y = convol_creacion(x,h)
         end
      end
 end
+
+x= 1;

@@ -30,6 +30,6 @@ hold on
 TSENO = 0:ts:(501)*ts-ts;
 plot(TSENO,SENO)
 subplot(3,1,2)
-plot(tSENO,convSENO),axis([0 2 min(convSENO) max(convSENO)]),title("SALIDA ECG")
+plot(tSENO,convSENO),axis([0 2 min(convSENO) max(convSENO)]),title("SALIDA SENO")
 subplot(3,1,3)
-plot(TSENO,SENO),title("ENTRADA ECG")
+plot(TSENO,SENO),title("ENTRADA SENO")

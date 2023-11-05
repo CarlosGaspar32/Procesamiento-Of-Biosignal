@@ -8,6 +8,7 @@ Antirrebotes botonAntirrebotespin5(5);
 void setup() {
     Serial.begin(9600);
     Serial.println(0);
+    attachInterrupt(digitalPinToInterrupt(2), pausar, RISING);
 }
 
 void loop() {
@@ -23,4 +24,9 @@ void loop() {
     if (botonAntirrebotespin5.estadoBoton()) {
         Serial.println('3');
     }
+   
+}
+
+void pausar(){
+        Serial.println('STOP');
 }
